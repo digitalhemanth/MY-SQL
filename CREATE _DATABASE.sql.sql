@@ -18,4 +18,6 @@ Third, specify the character set and collation for the new database. If you skip
 */
 
 CREATE DATABASE IF NOT EXISTS Temp_db; 
+
+-- Use new database 
 USE Temp_db;
