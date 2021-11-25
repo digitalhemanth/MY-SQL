@@ -1,0 +1,12 @@
+SELECT datname FROM pg_database;
+
+CREATE DATABASE HEMANTH;
+
+SELECT current_schema();
+
+SET search_path TO HEMANTH, public;
+
+CREATE SCHEMA pytest;
+
+drop database HEMANTH CASCADE;
+
