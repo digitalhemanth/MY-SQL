@@ -32,3 +32,18 @@ SELECT distinct(split_part (email,'@',2) ) as domain_name FROM pytest.emps
 
 SELECT split_part (email,'@',2) as domain_name FROM pytest.emps group by domain_name
 
+
+--Write the query to find the duplicate name and its frequency in the table,
+
+select salary, count(*) from  pytest.emps
+group by salary 
+having count(*) > 1 
+
+-- Write the query to remove the duplicates from a table without using a temporary table?
+
+DELETE FROM table 
+WHERE name IN (SELECT name FROM table GROUP BY name HAVING COUNT(*) > 1)
+AND NOT id IN (SELECT min(id) FROM table GROUP BY name)
+
+
+
