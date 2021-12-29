@@ -46,4 +46,26 @@ WHERE name IN (SELECT name FROM table GROUP BY name HAVING COUNT(*) > 1)
 AND NOT id IN (SELECT min(id) FROM table GROUP BY name)
 
 
+--Write the Query to find odd and even records from the table?
+Select * from pytest.emps where (id % 2) = 0
+Select * from pytest.emps where (id % 2) = 1
+
+--Write a SQL query to create a new table with data and structure copied from another table, create an empty table with the same structure as some other table?
+CREATE TABLE schema.newtable AS SELECT * FROM schema.oldtable;
+CREATE TABLE schema.newtable AS ( SELECT * FROM schema.oldtable ) with no data;
+
+--Write a SQL query to find the common records between two tables?
+SELECT column_lists FROM table_name WHERE condition  
+INTERSECT  
+SELECT column_lists FROM table_name WHERE condition;  
+
+--Write a SQL query to find the records that are present in one table but missing in another table?
+
+Select * from table_one
+Minus
+Select * from table_two;
+
+
+
+
 
