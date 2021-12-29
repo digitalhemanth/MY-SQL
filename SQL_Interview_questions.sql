@@ -65,6 +65,17 @@ Select * from table_one
 Minus
 Select * from table_two;
 
+--How to write an SQL query to find students' names start with 'A'?
+
+SELECT * FROM student WHERE stud_name like 'A%';  
+
+--Write the SQL query to get the third maximum salary of an employee from a table named employees.
+SELECT * FROM `employees` ORDER BY `salary` DESC LIMIT 1 OFFSET 2  
+
+--What is the default ordering of data using the ORDER BY clause? How could it be changed?
+SELECT expressions FROM tables    
+WHERE conditions    
+ORDER BY expression [ASC | DESC];   
 
 
 
