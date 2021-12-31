@@ -82,4 +82,7 @@ ORDER BY expression [ASC | DESC];
 Select SUBSTRING(StudentName,1,5) as studentname from student
 
 
+--Which operator is used in query for pattern matching?
+Select * from Student where studentname like 'a%'
 
+Select * from Student where studentname like 'ami_'
