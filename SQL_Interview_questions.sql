@@ -78,5 +78,8 @@ WHERE conditions
 ORDER BY expression [ASC | DESC];   
 
 
+-- What is the command used to fetch first 5 characters of the string?
+Select SUBSTRING(StudentName,1,5) as studentname from student
+
 
 
