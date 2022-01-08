@@ -87,6 +87,28 @@ INSERT INTO Title
  Select TRIM(DEPARTMENT) from Worker;
  
  
+ Select distinct DEPARTMENT,length(DEPARTMENT) from Worker;
+ 
+ SELECT w.DEPARTMENT 
+ FROM  Worker w
+ group by w.DEPARTMENT 
+ order by length(w.DEPARTMENT) DESC 
+ LIMIT 2 ;
+ 
+ 
+ Select REPLACE(FIRST_NAME,'a','A') from Worker;
+ 
+ Select CONCAT(FIRST_NAME,LAST_NAME) AS COMPLETE_NAME from Worker;
+ 
+ 
+ select SPLIT_PART('Hemanth kumar',' ',2 ) AS FIRSTNAME
+
+select SPLIT_PART('Hemanth kumar',' ',1 ) AS FIRSTNAME
+
+ 
+ 
+ 
+ 
  
  
  
