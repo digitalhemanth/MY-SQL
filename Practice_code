@@ -1,0 +1,23 @@
+CREATE TABLE Worker (
+	WORKER_ID SERIAL NOT NULL PRIMARY KEY,
+	FIRST_NAME CHAR(25),
+	LAST_NAME CHAR(25),
+	SALARY INTEGER,
+	JOINING_DATE TIMESTAMP,
+	DEPARTMENT CHAR(25)
+);
+
+
+INSERT INTO Worker 
+	(FIRST_NAME, LAST_NAME, SALARY, JOINING_DATE, DEPARTMENT) VALUES
+		('Niharika', 'Verma', 80000,CURRENT_DATE, 'Admin'),
+		( 'Vishal', 'Singhal', 300000,CURRENT_DATE, 'HR'),
+		( 'Amitabh', 'Singh', 500000,CURRENT_DATE, 'Admin'),
+		( 'Vivek', 'Bhati', 500000, CURRENT_DATE, 'Admin'),
+		( 'Vipul', 'Diwan', 200000,CURRENT_DATE, 'Account'),
+		( 'Satish', 'Kumar', 75000,CURRENT_DATE, 'Account'),
+		( 'Geetika', 'Chauhan', 90000,CURRENT_DATE, 'Admin');
+		
+		
+		
+SELECT * FROM Worker;
