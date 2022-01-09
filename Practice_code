@@ -124,6 +124,21 @@ select SPLIT_PART('Hemanth kumar',' ',1 ) AS FIRSTNAME
  Select * from Worker where FIRST_NAME like '%h%';
  
  
+ Select * from Worker where SALARY between 100000 and 500000;
+
+
+ Select * from Worker where 
+ EXTRACT(MONTH FROM JOINING_DATE) = 1
+ AND EXTRACT(YEAR FROM JOINING_DATE)= '2022' 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
