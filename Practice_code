@@ -195,6 +195,73 @@ SELECT Salary FROM Worker ORDER BY Salary DESC
 LIMIT 5) a
 offset 4;
 
+Select distinct W.WORKER_ID, W.FIRST_NAME, W.Salary 
+from Worker W, Worker W1 
+where W.Salary = W1.Salary 
+and W.WORKER_ID != W1.WORKER_ID;
+
+
+Select max(Salary) from Worker 
+where Salary not in (Select max(Salary) from Worker);
+
+select FIRST_NAME, DEPARTMENT from worker W where W.DEPARTMENT='HR' 
+union all 
+select FIRST_NAME, DEPARTMENT from Worker W1 where W1.DEPARTMENT='HR';
+
+SELECT *
+FROM WORKER
+WHERE WORKER_ID <= (SELECT count(WORKER_ID)/2 from Worker);
+
+
+SELECT DEPARTMENT, COUNT(WORKER_ID)  FROM Worker 
+GROUP BY DEPARTMENT HAVING COUNT(WORKER_ID) < 5;
+
+SELECT DEPARTMENT, COUNT(WORKER_ID)  FROM Worker 
+GROUP BY DEPARTMENT 
+
+
+Select * from Worker where WORKER_ID = (SELECT max(WORKER_ID) from Worker);
+
+
+Select * from Worker where WORKER_ID = (SELECT min(WORKER_ID) from Worker);
+
+
+SELECT * FROM Worker WHERE WORKER_ID <=5
+UNION
+SELECT * FROM (SELECT * FROM Worker W order by W.WORKER_ID DESC) AS W1 WHERE W1.WORKER_ID <=5;
+
+
+SELECT t.DEPARTMENT,t.FIRST_NAME,t.Salary from(SELECT max(Salary) as TotalSalary,DEPARTMENT 
+											   from Worker group by DEPARTMENT) as TempNew 
+Inner Join Worker t on TempNew.DEPARTMENT=t.DEPARTMENT 
+ and TempNew.TotalSalary=t.Salary;
+ 
+ 
+
+select * from (
+SELECT Salary FROM Worker ORDER BY Salary DESC 
+LIMIT 5) a
+offset 2;
+
+
+select * from (
+SELECT Salary FROM Worker ORDER BY Salary ASC 
+LIMIT 5) a
+offset 2;
+
+SELECT DEPARTMENT, sum(Salary) from worker group by DEPARTMENT;
+
+
+SELECT FIRST_NAME, SALARY from Worker WHERE SALARY=(SELECT max(SALARY) from Worker);
+
+
+
+
+
+
+
+
+
 
  
  
