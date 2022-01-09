@@ -105,6 +105,28 @@ INSERT INTO Title
 
 select SPLIT_PART('Hemanth kumar',' ',1 ) AS FIRSTNAME
 
+ Select * from Worker order by FIRST_NAME asc;
+ 
+ Select * from Worker order by FIRST_NAME asc, DEPARTMENT desc;
+ 
+ Select * from Worker where FIRST_NAME in ('Vipul','Satish');
+ 
+ Select * from Worker where FIRST_NAME not in ('Vipul','Satish');
+ 
+ 
+ Select * from Worker where DEPARTMENT like '%Ad%';
+ 
+ Select * from Worker where FIRST_NAME like '%a%';
+ 
+ 
+ Select * from Worker where FIRST_NAME like '_____a';
+ 
+ Select * from Worker where FIRST_NAME like '%h%';
+ 
+ 
+ 
+ 
+ 
  
  
  
