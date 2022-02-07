@@ -21,3 +21,8 @@ SQL> /
       7698 BLAKE      MANAGER         7839 01-MAY-1981 00:00:00       2850                    30
       7499 ALLEN      SALESMAN        7698 20-FEB-1981 00:00:00       1600        300         30
       7844 TURNER     SALESMAN        7698 08-SEP-1981 00:00:00       1500          0         30
+
+
+
+      A primary key is a column or a set of columns in a table whose values uniquely identify a row in the table. ...
+      A foreign key is a column or a set of columns in a table whose values correspond to the values of the primary key in another table.
