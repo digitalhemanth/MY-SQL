@@ -26,3 +26,39 @@ SQL> /
 
       A primary key is a column or a set of columns in a table whose values uniquely identify a row in the table. ...
       A foreign key is a column or a set of columns in a table whose values correspond to the values of the primary key in another table.
+
+
+ROWNUM:
+
+Oracle engine maintains the number of each record inserted by users in table.
+Rownum generates sequence number for each record each record inserted by users in table.
+
+
+SELECT ROWID, ROWNUM,empno
+FROM EMP1 WHERE ROWNUM <=4;
+
+
+Rowid
+
+ROWID is a pseudo column in a table which store and return row address in HEXADECIMAL format with database tables.
+ROWID is the permanent unique identifiers for each row in the database.
+
+SELECT rowid,empno FROM EMP1;
+
+
+ROW_NUMBER()
+
+ROW_NUMBER is an analytical function that assigns a number to each row according to its ordering within a group of rows.
+
+SELECT EMPNO,
+       ROWID,
+       ROWNUM,
+       ROW_NUMBER() OVER(ORDER BY MGR) 
+FROM EMP1 
+ORDER BY MGR;
+
+What is difference between bucketing and partitioning?
+
+Bucketing decomposes data into more manageable or equal parts. With partitioning,
+there is a possibility that you can create multiple small partitions based on column values. 
+If you go for bucketing, you are restricting number of buckets to store the data. This number is defined during table creation scripts.
