@@ -62,3 +62,8 @@ What is difference between bucketing and partitioning?
 Bucketing decomposes data into more manageable or equal parts. With partitioning,
 there is a possibility that you can create multiple small partitions based on column values. 
 If you go for bucketing, you are restricting number of buckets to store the data. This number is defined during table creation scripts.
+
+
+Is Python Object Oriented?
+
+Honestly, we cannot classify Python as strictly an object-oriented programming language. It is an intuitive, high-level, multi-paradigm programming language (supports multiple programming approaches) it that combines the features of both object-oriented programming and aspect-oriented programming. 
