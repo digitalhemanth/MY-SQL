@@ -60,6 +60,18 @@ SELECT ColumnName_1,
 FROM [Table_1],[Table_2]
 
 
+UPDATE P
+   SET P.UnitPrice = P.UnitPrice * 1.1
+  FROM Product P
+  JOIN OrderItem I ON P.Id = I.ProductId
+
+
+DELETE P
+  FROM Product P
+  LEFT JOIN OrderItem I ON P.Id = I.ProductId
+ WHERE I.Id IS NULL
+
+--------------------------------------------------
 
 SELECT column1 [, column2 ]
 FROM table1 [, table2 ]
@@ -70,5 +82,3 @@ UNION
 SELECT column1 [, column2 ]
 FROM table1 [, table2 ]
 [WHERE condition]
-
-
