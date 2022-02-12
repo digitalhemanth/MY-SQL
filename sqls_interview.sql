@@ -71,6 +71,21 @@ DELETE P
   LEFT JOIN OrderItem I ON P.Id = I.ProductId
  WHERE I.Id IS NULL
 
+SELECT CompanyName, 
+       ProductCount = (SELECT COUNT(P.id)
+                         FROM [Product] P
+                        WHERE P.SupplierId = S.Id)
+  FROM Supplier S
+
+--------------------------------------------------
+
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+
 --------------------------------------------------
 
 SELECT column1 [, column2 ]
@@ -82,3 +97,5 @@ UNION
 SELECT column1 [, column2 ]
 FROM table1 [, table2 ]
 [WHERE condition]
+
+
