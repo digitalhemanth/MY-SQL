@@ -22,3 +22,17 @@ CREATE TABLE contacts(
       FOREIGN KEY(customer_id) 
 	  REFERENCES customers(customer_id)
 );
+
+
+SELECT columns
+FROM table1 
+INNER JOIN table2
+ON table1.column = table2.column;
+
+
+SELECT columns
+FROM table1
+LEFT [OUTER] JOIN table2
+ON table1.column = table2.column;
+
+
