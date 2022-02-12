@@ -36,3 +36,39 @@ LEFT [OUTER] JOIN table2
 ON table1.column = table2.column;
 
 
+SELECT columns
+FROM table1
+RIGHT [OUTER] JOIN table2
+ON table1.column = table2.column;
+
+
+SELECT columns
+FROM table1
+FULL [OUTER] JOIN table2
+ON table1.column = table2.column;
+
+SELECT ColumnName_1, 
+       ColumnName_2, 
+       ColumnName_N
+FROM [Table_1]
+     CROSS JOIN [Table_2]
+
+
+SELECT ColumnName_1, 
+       ColumnName_2, 
+       ColumnName_N
+FROM [Table_1],[Table_2]
+
+
+
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+
+UNION
+
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+
+
