@@ -99,3 +99,12 @@ FROM table1 [, table2 ]
 [WHERE condition]
 
 
+SELECT expression1, expression2, ... expression_n
+FROM tables
+[WHERE conditions]
+INTERSECT
+SELECT expression1, expression2, ... expression_n
+FROM tables
+[WHERE conditions];
+
+
