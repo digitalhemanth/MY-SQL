@@ -107,4 +107,10 @@ SELECT expression1, expression2, ... expression_n
 FROM tables
 [WHERE conditions];
 
-
+SELECT expression1, expression2, ... expression_n
+FROM tables
+[WHERE conditions]
+MINUS
+SELECT expression1, expression2, ... expression_n
+FROM tables
+[WHERE conditions];
