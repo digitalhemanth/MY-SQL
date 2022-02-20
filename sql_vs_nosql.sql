@@ -9,3 +9,13 @@ Suitable for every type of organization – large or small.
 SQL is easy to learn and manage
 Open Source Programming Language
 Supports Data Definition Language and Data Manipulation Language to query the databases
+
+
+Features of NoSQL
+NoSQL has higher scalability than other database management systems
+Schema Free: You do not need to define the schema of the database before storing the data onto the system. 
+NoSQL allows the distribution of data on more than just one device. 
+With NoSQL Database, you do not require specialized or complex hardware or storage solutions.
+Does not require data normalization
+Simple API for easy user interfaces
+Can store unstructured, semi-structured, or structured data. 
