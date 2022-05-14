@@ -37,3 +37,43 @@ CREATE TABLE pytest.dept_emp (
 );
 
 select count(*) from pytest.dept_emp; --331603
+
+
+
+DROP TABLE IF EXISTS pytest.dept_manager;
+
+CREATE TABLE pytest.dept_manager (
+	dept_no 		VARCHAR(4)	NOT NULL,
+	emp_no 			INT			NOT NULL,
+	PRIMARY KEY (emp_no,dept_no),
+	FOREIGN KEY (emp_no) REFERENCES pytest.employees (emp_no),
+	FOREIGN KEY (dept_no) REFERENCES pytest.departments (dept_no)
+);
+
+
+select count(*) from pytest.dept_manager; --24
+
+DROP TABLE IF EXISTS pytest.salaries;
+
+CREATE TABLE pytest.salaries (
+	emp_no 			int		NOT NULL,
+	salary 			VARCHAR(12)		NOT NULL,
+	PRIMARY KEY (emp_no),
+	FOREIGN KEY (emp_no) REFERENCES pytest.employees(emp_no)	
+);
+
+ALTER TABLE pytest.salaries ALTER COLUMN salary TYPE integer USING salary::integer;
+
+select count(*) from pytest.salaries; --300024
+
+
+DROP TABLE IF EXISTS pytest.titles;
+
+CREATE TABLE pytest.titles (
+	title_id 		VARCHAR		NOT NULL,
+	title 			VARCHAR		NOT NULL,
+	PRIMARY KEY (title_id)
+);
+
+select count(*) from pytest.titles; -- 7
+
