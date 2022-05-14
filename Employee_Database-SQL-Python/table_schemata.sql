@@ -7,5 +7,21 @@ CREATE TABLE pytest.departments (
 	PRIMARY KEY (dept_no)
 );
 
-select * from pytest.departments;
+select count(*) from pytest.departments; --9
 
+
+DROP TABLE IF EXISTS pytest.employees;
+
+CREATE TABLE pytest.employees (
+	emp_no 			INT 		NOT NULL,
+	emp_title_id    VARCHAR 	NOT NULL,
+	birth_date 		DATE 		NOT NULL,
+	first_name 		VARCHAR 	NOT NULL,
+	last_name 		VARCHAR 	NOT NULL,
+	gender 			VARCHAR 	NOT NULL,
+	hire_date 		DATE 		NOT NULL,
+	UNIQUE (emp_no),
+	PRIMARY KEY (emp_no)
+);
+
+select count(*) from pytest.employees; --300024
