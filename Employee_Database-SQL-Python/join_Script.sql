@@ -32,9 +32,9 @@ on demp.dept_no = dept.dept_no
 
 select emp.emp_no,
 concat(emp.first_name, ' ',emp.last_name) as Name,
-sal.salary,
 title.title,
-dept.dept_name   
+dept.dept_name,  
+sal.salary
 from pytest.employees emp
 inner join pytest.salaries sal 
 on emp.emp_no = sal.emp_no
