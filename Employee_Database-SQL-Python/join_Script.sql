@@ -1,0 +1,30 @@
+select * from pytest.employees;
+select  * from  pytest.dept_emp;
+select  * from  pytest.salaries;
+
+
+select *
+from pytest.employees emp
+inner join pytest.salaries sal 
+on emp.emp_no = sal.emp_no
+inner join pytest.dept_emp demp 
+on emp.emp_no = demp.emp_no
+inner join pytest.titles title 
+on emp.emp_title_id = title.title_id
+inner join pytest.departments dept 
+on demp.dept_no = dept.dept_no
+
+select emp.*,
+sal.salary,
+title.title,
+dept.dept_name   
+from pytest.employees emp
+inner join pytest.salaries sal 
+on emp.emp_no = sal.emp_no
+inner join pytest.dept_emp demp 
+on emp.emp_no = demp.emp_no
+inner join pytest.titles title 
+on emp.emp_title_id = title.title_id
+inner join pytest.departments dept 
+on demp.dept_no = dept.dept_no
+
