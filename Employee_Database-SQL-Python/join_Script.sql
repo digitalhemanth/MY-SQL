@@ -59,7 +59,7 @@ inner join pytest.titles title
 on emp.emp_title_id = title.title_id
 inner join pytest.departments dept 
 on demp.dept_no = dept.dept_no
-group by dept.dept_name,salary
+group by dept.dept_name
 order by salary desc
 
 
