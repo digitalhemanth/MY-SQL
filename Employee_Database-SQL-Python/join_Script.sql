@@ -122,7 +122,7 @@ concat(emp.first_name, ' ',emp.last_name) as FullName,
 title.title as title ,
 dept.dept_name as dept,  
 sal.salary as salary,
-NTH_VALUE(emp.first_name, 2) over(partition by dept order by salary asc RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) as "FIRST"
+NTH_VALUE(emp.first_name, 2) over(partition by dept order by salary desc RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) as "FIRST"
 from pytest.employees emp
 inner join pytest.salaries sal 
 on emp.emp_no = sal.emp_no
