@@ -200,7 +200,7 @@ concat(emp.first_name, ' ',emp.last_name) as FullName,
 title.title as title ,
 dept.dept_name as dept,  
 sal.salary as salary,
-first_value (emp.first_name) over(partition by dept ) as "First"
+last_value (emp.first_name) over(partition by dept ) as "First"
 from pytest.employees emp
 inner join pytest.salaries sal 
 on emp.emp_no = sal.emp_no
