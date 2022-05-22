@@ -210,3 +210,20 @@ inner join pytest.titles title
 on emp.emp_title_id = title.title_id
 inner join pytest.departments dept 
 on demp.dept_no = dept.dept_no
+
+
+select 
+dept.dept_name as deptartment,  
+sum(sal.salary) as total_salary
+from pytest.employees emp
+inner join pytest.salaries sal 
+on emp.emp_no = sal.emp_no
+inner join pytest.dept_emp demp 
+on emp.emp_no = demp.emp_no
+inner join pytest.titles title 
+on emp.emp_title_id = title.title_id
+inner join pytest.departments dept 
+on demp.dept_no = dept.dept_no
+group by deptartment 
+order by deptartment asc
+
