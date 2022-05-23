@@ -226,6 +226,8 @@ on demp.dept_no = dept.dept_no
 group by deptartment 
 order by deptartment asc
 
+Write a query to get the top 3 employess list who are getting highest salary from each  department ascending order. 
+
 select * from (
 select emp.emp_no,
 concat(emp.first_name, ' ',emp.last_name) as FullName,
