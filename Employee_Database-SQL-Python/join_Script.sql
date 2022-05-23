@@ -245,3 +245,22 @@ on emp.emp_title_id = title.title_id
 inner join pytest.departments dept 
 on demp.dept_no = dept.dept_no ) as res 
 where res.Sal <=3
+
+
+select emp.emp_no,
+concat(emp.first_name, ' ',emp.last_name) as FullName,
+title.title as title ,
+dept.dept_name as dept,  
+sal.salary as salary,
+nth_value(sal.salary,5 ) over( partition by dept order by dept desc RANGE BETWEEN 
+            UNBOUNDED PRECEDING AND 
+            UNBOUNDED FOLLOWING) as Sal
+from pytest.employees emp
+inner join pytest.salaries sal 
+on emp.emp_no = sal.emp_no
+inner join pytest.dept_emp demp 
+on emp.emp_no = demp.emp_no
+inner join pytest.titles title 
+on emp.emp_title_id = title.title_id
+inner join pytest.departments dept 
+on demp.dept_no = dept.dept_no
