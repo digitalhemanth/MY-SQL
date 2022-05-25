@@ -264,3 +264,34 @@ inner join pytest.titles title
 on emp.emp_title_id = title.title_id
 inner join pytest.departments dept 
 on demp.dept_no = dept.dept_no
+
+
+
+create table pytest.Table_A
+    (
+       ID int, 
+       Names varchar(10)
+    );
+ --drop table pytest.Table_B;
+ create table pytest.Table_B
+    (
+       ID int, 
+       CODE varchar(2)
+    );
+   
+   
+   insert into pytest.Table_A values(4,'RUCHI');
+   insert into pytest.Table_B values(3,'E');
+  
+  select * from pytest.Table_B; 
+ 
+  select 
+  a.id,
+  a.Names,
+  b.id,
+  b.code
+  from pytest.Table_A a
+  left join pytest.Table_B b
+  on a.id = b.id
+
+
