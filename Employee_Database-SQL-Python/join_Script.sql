@@ -280,18 +280,24 @@ create table pytest.Table_A
     );
    
    
-   insert into pytest.Table_A values(4,'RUCHI');
+   insert into pytest.Table_A values(4,'Krishna');
    insert into pytest.Table_B values(3,'E');
+  
+  delete from pytest.Table_B
+  where id = null
   
   select * from pytest.Table_B; 
  
-  select 
-  a.id,
-  a.Names,
-  b.id,
-  b.code
-  from pytest.Table_A a
-  left join pytest.Table_B b
-  on a.id = b.id
+ 
+ 
+ 
+  SELECT 
+  A.ID,
+  A.NAMES,
+  B.ID,
+  B.CODE
+  FROM PYTEST.TABLE_A A
+  LEFT JOIN PYTEST.TABLE_B B
+  ON A.ID = B.ID
 
 
