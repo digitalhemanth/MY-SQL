@@ -64,4 +64,27 @@ create table pytest.Table_A
   INNER JOIN PYTEST.TABLE_B B
   ON A.ID = B.ID
   
+  --Unlike INNER JOIN , a FULL JOIN returns all the rows from both joined tables, whether they have a matching row or not
+  SELECT 
+  A.ID,
+  A.NAMES,
+  B.ID,
+  B.CODE
+  FROM PYTEST.TABLE_A A
+  FULL JOIN PYTEST.TABLE_B B
+  ON A.ID = B.ID
+  
+  
+  --A cross join is a type of join that returns the Cartesian product of rows from the tables in the join.
+  SELECT 
+  A.ID,
+  A.NAMES,
+  B.ID,
+  B.CODE
+  FROM PYTEST.TABLE_A A
+  CROSS JOIN PYTEST.TABLE_B B
+
+  
+  
+  
   
