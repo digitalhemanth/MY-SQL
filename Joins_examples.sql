@@ -54,8 +54,7 @@ create table pytest.Table_A
   
   
   
-  --
-Inner joins combine records from two tables whenever there are matching values in a field common to both tables.
+  --Inner joins combine records from two tables whenever there are matching values in a field common to both tables.
   SELECT 
   A.ID,
   A.NAMES,
