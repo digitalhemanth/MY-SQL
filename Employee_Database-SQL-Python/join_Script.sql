@@ -301,3 +301,15 @@ create table pytest.Table_A
   ON A.ID = B.ID
 
 
+
+  
+  
+  
+  select * from pytest.employees
+  
+  
+  
+  
+  
+  
+  
