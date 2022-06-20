@@ -310,6 +310,29 @@ create table pytest.Table_A
   
   
   
+ DROP TABLE pytest.employees_dtl;
+
+CREATE TABLE pytest.employees_dtl (
+	emp_no serial NOT NULL,
+	age int not null,
+	gender varchar NOT NULL
+	);
+
+  insert into pytest.employees_dtl values(8,5,'F')
   
+  select * from pytest.employees_dtl
+  
+
+ select count(*) from (
+  select
+  case when age> 1 and age < 10 then 'age 1 < 10'
+       when age> 10 and age < 30 then 'age 10 < 30'
+       when age> 30 and age < 60 then 'age 30 < 60'
+   end as agegroup
+   from pytest.employees_dtl ) as temps 
+   group by temps
+   
+  
+   
   
   
