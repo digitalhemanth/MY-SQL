@@ -323,14 +323,24 @@ CREATE TABLE pytest.employees_dtl (
   select * from pytest.employees_dtl
   
 
- select count(*) from (
+ select count(*),* from (
   select
-  case when age> 1 and age < 10 then 'age 1 < 10'
-       when age> 10 and age < 30 then 'age 10 < 30'
-       when age> 30 and age < 60 then 'age 30 < 60'
+  case when age>= 1 and age <= 10 then 'age 1 < 10'
+       when age>= 10 and age <= 30 then 'age 10 < 30'
+       when age>= 30 and age <= 60 then 'age 30 < 60'
    end as agegroup
    from pytest.employees_dtl ) as temps 
-   group by temps
+   group by agegroup
+   
+   
+   
+    select
+    count(case when age> 1 and age < 10 then emp_no ELSE null end) as "1 < 10",
+     count(case when age> 10 and age < 30 then emp_no ELSE null end) as  "10 < 30",
+     count(case when age> 30 and age < 60 then emp_no ELSE null end) as " 30 < 60"
+  from pytest.employees_dtl
+   
+   
    
   
    
