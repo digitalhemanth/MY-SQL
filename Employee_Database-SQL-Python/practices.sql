@@ -14,3 +14,15 @@ insert into pytest.Teams values('CHA' , 'RAJA', 'JAI');
 insert into pytest.Teams values('PANJ' , 'KOAL', 'RAJ');
 insert into pytest.Teams values('ASSA' , 'JAI', 'BANG');
 insert into pytest.Teams values('BANG' , 'HIMA', 'AND');
+
+
+select distinct x.Team,sum(x.Team) as matchs, 
+count(w.winners) as won
+from 
+(select local_team as Team from pytest.Teams
+union all 
+select away_team as Team from pytest.Teams) x
+left join (select winners from pytest.Teams ) w
+on x.Team = w.winners
+group by x.Team
+
