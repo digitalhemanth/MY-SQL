@@ -288,6 +288,7 @@ create table pytest.Table_A
   
   select * from pytest.Table_B; 
  
+  select * from pytest.Table_A; 
  
  
  
@@ -297,7 +298,7 @@ create table pytest.Table_A
   B.ID,
   B.CODE
   FROM PYTEST.TABLE_A A
-  LEFT JOIN PYTEST.TABLE_B B
+  Inner JOIN PYTEST.TABLE_B B
   ON A.ID = B.ID
 
 
