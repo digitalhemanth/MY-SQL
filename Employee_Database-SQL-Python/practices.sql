@@ -26,3 +26,38 @@ left join (select winners from pytest.Teams ) w
 on x.Team = w.winners
 group by x.Team
 
+
+
+CREATE TABLE employee (
+    emp_id 	INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    gender CHAR(1),
+    birthdate DATE,
+    email VARCHAR(100) UNIQUE,
+    salary INT
+);
+
+
+
+INSERT INTO employee
+VALUES(1,'hem','lohi','m', DATE '1988-01-09', 'hem@email.com',5000);
+
+
+INSERT INTO employee
+VALUES(1,'hemanth','lohi','m', DATE '1988-01-09', 'hem@email.com',5000);
+
+
+
+INSERT INTO employee
+VALUES(1,'hemanth','lohi','m', DATE '1988-01-09', 'hem@email.com',5000)
+ON CONFLICT DO NOTHING;
+
+
+
+
+
+
+
+
+
