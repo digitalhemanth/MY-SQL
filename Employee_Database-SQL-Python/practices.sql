@@ -45,16 +45,19 @@ VALUES(1,'hem','lohi','m', DATE '1988-01-09', 'hem@email.com',5000);
 
 
 INSERT INTO employee
-VALUES(1,'hemanth','lohi','m', DATE '1988-01-09', 'hem@email.com',5000);
-
-
-
-INSERT INTO employee
 VALUES(1,'hemanth','lohi','m', DATE '1988-01-09', 'hem@email.com',5000)
 ON CONFLICT DO NOTHING;
 
+INSERT INTO employee
+VALUES(1,'hemanth','lohi','m', DATE '1988-01-09', 'hemanth@email.com',2600000)
+ON CONFLICT(emp_id) DO UPDATE SET 
+first_name = EXCLUDED.first_name,
+email = EXCLUDED.email,
+salary = EXCLUDED.salary;
 
 
+
+select * from employee
 
 
 
