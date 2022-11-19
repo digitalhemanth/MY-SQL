@@ -24,7 +24,6 @@ inner join pytest.B b on a.id = b.id
 
 
 
-
 select 
 a.id,
 b.id
